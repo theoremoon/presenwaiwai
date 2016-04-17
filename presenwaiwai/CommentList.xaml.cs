@@ -23,5 +23,12 @@ namespace presenwaiwai
         {
             InitializeComponent();
         }
+        public void AddComment(string comment)
+        {
+            ListBoxItem item = new ListBoxItem();
+            item.Content = comment;
+
+            listBox.Items.Add(item);
+        }
     }
 }
