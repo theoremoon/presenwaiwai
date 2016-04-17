@@ -24,5 +24,26 @@ namespace presenwaiwai
         {
             InitializeComponent();
         }
+
+        private Canvas CreateCanvasWindow()
+        {
+            Window childWin = new Window();
+
+            childWin.Owner = Window.GetWindow(this);
+            childWin.ShowInTaskbar = false;
+            childWin.AllowsTransparency = true;
+            childWin.Background = Brushes.Transparent;
+            childWin.WindowStyle = WindowStyle.None;
+            childWin.WindowState = WindowState.Maximized;
+            childWin.Topmost = true;
+            childWin.Content = new Canvas();
+            childWin.Show();
+
+            return childWin.Content as Canvas;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
