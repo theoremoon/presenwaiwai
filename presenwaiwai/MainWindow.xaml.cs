@@ -45,5 +45,11 @@ namespace presenwaiwai
         private void button_Click(object sender, RoutedEventArgs e)
         {
         }
+
+        private void mainwindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            var comment_list = new CommentList();
+            comment_list.Show();
+        }
     }
 }

@@ -1,11 +1,11 @@
-﻿<Window x:Class="presenwaiwai.MainWindow"
+﻿<Window x:Name="mainwindow" x:Class="presenwaiwai.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:presenwaiwai"
         mc:Ignorable="d"
-        Title="PresenWaiWai" Height="149" Width="333">
+        Title="PresenWaiWai" Height="149" Width="333" Loaded="mainwindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="61*"/>
@@ -16,7 +16,7 @@
         <Label x:Name="label" Grid.ColumnSpan="2" Content="Listen: http://localhost:" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="170" Margin="9,12,0,0" FontSize="14.667"/>
         <TextBox x:Name="port" Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="131,19,0,0" TextWrapping="Wrap" Text="8000" VerticalAlignment="Top" Width="61"/>
         <Label x:Name="label1" Grid.ColumnSpan="2" Content="Good×" Margin="10,0,227,14" FontSize="14.667" Height="30" VerticalAlignment="Bottom"/>
-        <Label x:Name="good_count" Content="0" Grid.Column="1" Margin="29,0,0,14" FontSize="14.667" FontWeight="Bold" RenderTransformOrigin="0.534,0.767" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="58"/>
+        <Label x:Name="good_count" Content="0" Grid.Column="1" Margin="34,0,0,14" FontSize="14.667" FontWeight="Bold" RenderTransformOrigin="0.534,0.767" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="58"/>
 
     </Grid>
 </Window>
