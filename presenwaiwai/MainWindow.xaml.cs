@@ -49,6 +49,7 @@ namespace presenwaiwai
             if (commentListWindow == null)
             {
                 commentListWindow = new CommentList();
+                commentListWindow.Owner = Window.GetWindow(this);
                 commentListWindow.Show();
                 commentListWindow.Closed += CommentListWindow_Closed;
             }
