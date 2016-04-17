@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:presenwaiwai"
         mc:Ignorable="d"
-        Title="MainWindow" Height="149" Width="333">
+        Title="PresenWaiWai" Height="149" Width="333">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="61*"/>
