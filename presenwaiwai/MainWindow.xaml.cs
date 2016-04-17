@@ -20,6 +20,8 @@ namespace presenwaiwai
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private CommentList commentListWindow;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,14 +44,33 @@ namespace presenwaiwai
             return childWin.Content as Canvas;
         }
 
+        private void CommentListWindowInit()
+        {
+            if (commentListWindow == null)
+            {
+                commentListWindow = new CommentList();
+                commentListWindow.Show();
+                commentListWindow.Closed += CommentListWindow_Closed;
+            }
+        }
+
+        private void CommentListWindow_Closed(object sender, EventArgs e)
+        {
+            commentListWindow = null;
+        }
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
         }
 
         private void mainwindow_Loaded(object sender, RoutedEventArgs e)
         {
-            var comment_list = new CommentList();
-            comment_list.Show();
+            CommentListWindowInit();
+        }
+
+        private void openCommentList_Click(object sender, RoutedEventArgs e)
+        {
+            CommentListWindowInit();
         }
     }
 }
