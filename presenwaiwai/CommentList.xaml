@@ -1,12 +1,17 @@
-﻿<Window x:Class="presenwaiwai.CommentList"
+﻿<Window x:Name="commentListWindow" x:Class="presenwaiwai.CommentList"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:presenwaiwai"
         mc:Ignorable="d"
-        Title="CommentList" Height="300" Width="300">
+        Title="CommentList" Height="300" Width="300" Loaded="commentListWindow_Loaded">
     <Grid>
-        <ListBox x:Name="listBox" Margin="0,0,0,0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="32*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listBox" Margin="0,0,0,0" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

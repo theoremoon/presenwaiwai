@@ -25,10 +25,22 @@ namespace presenwaiwai
         }
         public void AddComment(string comment)
         {
+            if (!CheckAccess())
+            {
+                Dispatcher.BeginInvoke(new Action(() => AddComment(comment)));
+                return;
+            }
+
             ListBoxItem item = new ListBoxItem();
             item.Content = comment;
 
             listBox.Items.Add(item);
+        }
+
+
+        private void commentListWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            commentListWindow.WindowStyle = WindowStyle.ToolWindow;
         }
     }
 }

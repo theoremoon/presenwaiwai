@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:presenwaiwai"
         mc:Ignorable="d"
-        Title="PresenWaiWai" Height="149" Width="333" Loaded="mainwindow_Loaded">
+        Title="PresenWaiWai" Height="175.096" Width="333" Loaded="mainwindow_Loaded" Closed="mainwindow_Closed" WindowStyle="ToolWindow" KeyUp="mainwindow_KeyUp">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="61*"/>
@@ -13,11 +13,14 @@
             <ColumnDefinition Width="32*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button" Content="Run" Margin="0,0,10,14" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="81" Click="button_Click" Grid.Column="1" FontSize="14.667" Grid.ColumnSpan="2"/>
-        <Label x:Name="label" Grid.ColumnSpan="2" Content="Listen: http://localhost:" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="170" Margin="10,17,0,0" FontSize="14.667"/>
-        <TextBox x:Name="port" Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="132,24,0,0" TextWrapping="Wrap" Text="8000" VerticalAlignment="Top" Width="61"/>
+        <Label x:Name="label" Grid.ColumnSpan="2" Content="Listen: http://localhost:" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="158" Margin="10,17,0,0" FontSize="14.667"/>
+        <TextBox x:Name="port" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="135,23,0,0" TextWrapping="Wrap" Text="8000" VerticalAlignment="Top" Width="73" RenderTransformOrigin="-0.589,0.478"/>
         <Label x:Name="label1" Grid.ColumnSpan="2" Content="Good×" Margin="10,0,227,42" FontSize="14.667" Height="30" VerticalAlignment="Bottom"/>
         <Label x:Name="good_count" Content="0" Grid.Column="1" Margin="34,0,0,42" FontSize="14.667" FontWeight="Bold" RenderTransformOrigin="0.517,0.167" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="58"/>
         <Button x:Name="openCommentList" Content="OpenCommentList" HorizontalAlignment="Left" Margin="10,0,0,14" Width="120" Grid.ColumnSpan="2" Height="20" VerticalAlignment="Bottom" Click="openCommentList_Click"/>
+        <Label x:Name="label2" Content="文字速度" RenderTransformOrigin="0.958,2.199" Margin="9,0,0,65" Grid.ColumnSpan="2" FontSize="14.667" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="68"/>
+        <Label x:Name="label3" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="114,0,0,67" Height="26" VerticalAlignment="Bottom"/>
+        <Slider x:Name="text_speed" Grid.Column="1" HorizontalAlignment="Left" Margin="45,0,0,72" Width="69" Minimum="1" Maximum="10" Value="5"  Height="18" VerticalAlignment="Bottom" ValueChanged="text_speed_ValueChanged"/>
 
     </Grid>
 </Window>
