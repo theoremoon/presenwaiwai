@@ -88,6 +88,7 @@ namespace presenwaiwai
         {
             string html = @"
 <!doctype html>
+<meta charset='utf-8' />
 <style>
   *{ font-size: 20px; }
   div, button { margin: 0.5em; }
@@ -102,7 +103,7 @@ namespace presenwaiwai
   input[type='submit']:hover,button:hover { border: 2px solid #cf00b5; cursor: pointer; color: #cf00b5; }
   input[type='submit']:active,button:active { text-shadow: none; }
 </style>
-<form action='#' method='post'>
+<form action='#' method='post' accept-charset='utf-8'>
   <div>
     <input type='text' name='text' />
   </div>
